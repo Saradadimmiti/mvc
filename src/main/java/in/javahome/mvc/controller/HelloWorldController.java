@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HelloWorldController {
 	@RequestMapping(value="/welcome", method=RequestMethod.GET)
 	public String welcome() {
-		return "welcome";
+		return "redirect:https://www.google.in/";
 	}
 }
