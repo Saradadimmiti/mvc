@@ -1,7 +1,14 @@
 package in.javahome.mvc.model;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Student {
+	@NotEmpty(message="Student name is mandatory")
+	@Length(min=4,max=20, message="Name must be minimum 4 and max 20 characters")
 	private String name;
+	@Email(message="Not a valid email")
 	private String mail;
 	private String phone;
 	private String course;
