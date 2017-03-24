@@ -1,5 +1,7 @@
 package in.javahome.mvc.controller;
 
+import java.sql.SQLException;
+
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -24,7 +26,10 @@ public class StudentController {
 	}
 
 	@RequestMapping(value = "/student", method = RequestMethod.GET)
-	public String selectStudent(ModelMap map) {
+	public String selectStudent(ModelMap map) throws SQLException {
+		if(10>5){
+			throw new SQLException();
+		}
 		map.addAttribute("std", new Student());
 		return "student";
 	}
