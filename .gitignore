@@ -1,0 +1,6 @@
+/target/
+/bin/
+org.eclipse.*
+.project
+.classpath
+.jsd*
